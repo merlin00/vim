@@ -74,7 +74,7 @@ let g:indentLine_char = '┆'
 " let g:indentLine_leadingSpaceEnabled = 1
 " let g:indentLine_leadingSpaceChar = '.'
 let g:indentLine_enabled = 1
-let g:indentLine_fileType = ['python', 'c', 'cpp']
+let g:indentLine_fileType = ['python', 'c', 'cpp', 'html', 'css']
 
 " for html/rb files, 2 spaces
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
