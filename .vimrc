@@ -20,7 +20,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'mhinz/vim-startify'
 
 Plugin 'scrooloose/syntastic'
-" Plugin 'w0rp/ale'
+"Plugin 'w0rp/ale'
 
 Plugin 'shougo/deoplete.nvim'
 Plugin 'carlitux/deoplete-ternjs'
@@ -96,17 +96,26 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
  
+let g:syntastic_python_pylint_args = '--disable=C0103'
 let g:syntastic_check_on_open = 1
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" let g:ale_lint_on_save = 1 "Lint when saving a file 
-" let g:ale_sign_error = '✖' "Lint error sign 
-" let g:ale_sign_warning = '⚠' "Lint warning sign 
-" let g:ale_statusline_format =[' %d E ', ' %d W ', ''] "Status line texts 
-" let g:ale_linters = {'javascript': ['eslint']} "Lint js with eslint 
+let g:syntastic_error_symbol = '✖'
+let g:syntastic_style_error_symbol = '>'
+let g:syntastic_warning_symbol = '!' " '⚠' 
+let g:syntastic_style_warning_symbol = '>'
+" ale plugin
+" let g:ale_linters = {
+" 			\ 'python': ['pylint'],
+"			\}
+"let g:ale_python_pylint_options = '--disable=C0103'
+"let g:ale_lint_on_save = 1 "Lint when saving a file 
+"let g:ale_sign_error = '✖' "Lint error sign 
+"let g:ale_sign_warning = '⚠' "Lint warning sign 
+"let g:ale_statusline_format =[' %d E ', ' %d W ', ''] "Status line texts 
 " let g:ale_fixers = {'javascript': ['prettier', 'eslint']} "Fix eslint errors
 
 " Use deoplete
