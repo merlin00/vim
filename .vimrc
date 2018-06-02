@@ -51,7 +51,7 @@ set hlsearch
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
-set encoding=utf8
+set encoding=utf-8
 set mouse=a
 set list
 set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
