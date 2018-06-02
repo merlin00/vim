@@ -53,7 +53,7 @@ set softtabstop=4
 set tabstop=4
 set encoding=utf8
 set mouse=a
-
+set list listchars=tab:→\ ,trail:·
 set completeopt-=preview
 
 autocmd InsertEnter * set nocul
@@ -70,7 +70,10 @@ let g:airline#extensions#tabline#buffer_idx_mode = 1
 
 " indentline plugin 
 let g:indentLine_char = '┆'
+" let g:indentLine_leadingSpaceEnabled = 1
+" let g:indentLine_leadingSpaceChar = '.'
 let g:indentLine_enabled = 1
+let g:indentLine_fileType = ['python', 'c', 'cpp']
 
 " for html/rb files, 2 spaces
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
