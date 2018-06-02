@@ -53,7 +53,8 @@ set softtabstop=4
 set tabstop=4
 set encoding=utf8
 set mouse=a
-set list listchars=tab:→\ ,trail:·
+set list
+set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 set completeopt-=preview
 
 autocmd InsertEnter * set nocul
