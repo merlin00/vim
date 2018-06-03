@@ -48,6 +48,9 @@ set smartindent
 set incsearch
 set hlsearch
 
+if has("gui_macvim")
+	set guifont=Hack\ Nerd\ Font
+endif
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
