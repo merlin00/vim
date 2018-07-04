@@ -20,11 +20,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'mhinz/vim-startify'
 
 Plugin 'scrooloose/syntastic'
-"Plugin 'w0rp/ale'
-
-Plugin 'shougo/deoplete.nvim'
-Plugin 'carlitux/deoplete-ternjs'
-Plugin 'zchee/deoplete-jedi'
+Plugin 'valloric/youcompleteme'
 
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-surround'
@@ -80,15 +76,18 @@ let g:indentLine_enabled = 1
 let g:indentLine_fileType = ['python', 'c', 'cpp', 'html', 'css']
 
 " for html/rb files, 2 spaces
-autocmd Filetype html setlocal ts=2 sw=2 expandtab
-autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
+autocmd Filetype html setlocal ts=4 sw=4
 
 " for js/coffee/jade files, 4 spaces
-autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype javascript setlocal ts=4 sw=4 sts=0
 autocmd Filetype coffeescript setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype jade setlocal ts=4 sw=4 sts=0 expandtab
 
 autocmd Filetype python setlocal tabstop=4 shiftwidth=4 sts=4 expandtab
+
+" YCM
+let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
 
 " UltiSnips plugin
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -103,6 +102,7 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
  
+let g:Syntastic_javascript_checkers = ['eslint']
 let g:syntastic_python_pylint_args = '--disable=C0103'
 let g:syntastic_check_on_open = 1
 let g:syntastic_always_populate_loc_list = 1
@@ -114,19 +114,6 @@ let g:syntastic_error_symbol = '✖'
 let g:syntastic_style_error_symbol = '>'
 let g:syntastic_warning_symbol = '!' " '⚠' 
 let g:syntastic_style_warning_symbol = '>'
-" ale plugin
-" let g:ale_linters = {
-" 			\ 'python': ['pylint'],
-"			\}
-"let g:ale_python_pylint_options = '--disable=C0103'
-"let g:ale_lint_on_save = 1 "Lint when saving a file 
-"let g:ale_sign_error = '✖' "Lint error sign 
-"let g:ale_sign_warning = '⚠' "Lint warning sign 
-"let g:ale_statusline_format =[' %d E ', ' %d W ', ''] "Status line texts 
-" let g:ale_fixers = {'javascript': ['prettier', 'eslint']} "Fix eslint errors
-
-" Use deoplete
-let g:deoplete#enable_at_startup = 1
 
 " Key map
 nmap <leader>n :NERDTreeToggle<CR>
