@@ -33,6 +33,10 @@ Plugin 'honza/vim-snippets'
 Plugin 'godlygeek/tabular'
 
 Plugin 'mattn/emmet-vim'
+" Plugin 'jshint/jshint'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'yannickcr/eslint-plugin-react'
 call vundle#end()
 filetype plugin indent on
 
@@ -85,9 +89,12 @@ autocmd Filetype jade setlocal ts=4 sw=4 sts=0 expandtab
 
 autocmd Filetype python setlocal tabstop=4 shiftwidth=4 sts=4 expandtab
 
+let g:python3_host_prog = '/usr/local/bin/python3'
+
 " YCM
 let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
+let g:ycm_python_binary_path = 'python'
 
 " UltiSnips plugin
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -102,7 +109,8 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
  
-let g:Syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_python_pylint_args = '--disable=C0103'
 let g:syntastic_check_on_open = 1
 let g:syntastic_always_populate_loc_list = 1
