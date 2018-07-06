@@ -89,6 +89,9 @@ autocmd Filetype jade setlocal ts=4 sw=4 sts=0 expandtab
 
 autocmd Filetype python setlocal tabstop=4 shiftwidth=4 sts=4 expandtab
 
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/doc/*,*/docs/*,*/node_modules/*,*.pyc    " MacOSX/Linux
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
 let g:python3_host_prog = '/usr/local/bin/python3'
 
 " YCM
