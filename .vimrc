@@ -57,7 +57,7 @@ set tabstop=4
 set encoding=utf-8
 set mouse=a
 set list
-set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+set listchars=tab:\┆\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 set completeopt-=preview
 
 autocmd InsertEnter * set nocul
@@ -77,10 +77,10 @@ let g:indentLine_char = '┆'
 " let g:indentLine_leadingSpaceEnabled = 1
 " let g:indentLine_leadingSpaceChar = '.'
 let g:indentLine_enabled = 1
-let g:indentLine_fileType = ['python', 'c', 'cpp', 'html', 'css']
+let g:indentLine_fileType = ['python']
 
 " for html/rb files, 2 spaces
-autocmd Filetype html setlocal ts=4 sw=4
+autocmd Filetype html setlocal ts=2 sw=2
 
 " for js/coffee/jade files, 4 spaces
 autocmd Filetype javascript setlocal ts=4 sw=4 sts=0
